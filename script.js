@@ -8932,10 +8932,11 @@ const targetWords = [
   'vurpa',
   'vurst',
   'vuxen',
-  'vyssa'
+  'vyssa',
 ];
 
 const dictionary = [
+  'åålor',
   'aalto',
   'aarau',
   'aares',
@@ -17887,9 +17888,11 @@ const offsetFromDate = new Date(2022, 0, 1);
 const msOffset = Date.now() - offsetFromDate;
 const dayOffset = msOffset / 1000 / 60 / 60 / 24;
 */
-console.log(targetWord);
+
 
 const targetWord = targetWords[Math.floor(Math.random() * targetWords.length)];
+console.log(targetWord);
+
 startInteraction();
 
 function startInteraction() {
@@ -17930,7 +17933,7 @@ function handleKeyPress(e) {
     return;
   }
 
-  if (e.key.match(/^[a-z]$/)) {
+  if (e.key.match(/^[a-ö]$/)) {
     pressKey(e.key);
     return;
   }
