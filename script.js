@@ -11723,7 +11723,8 @@ function checkWinLose(guess, tiles) {
 
   const remainingTiles = guessGrid.querySelectorAll(':not([data-letter])');
   if (remainingTiles.length === 0) {
-    showAlert(targetWord.toUpperCase(), null);
+    showAlert('Rätt ord var: ' + targetWord.toUpperCase(), null);
+    showAlert('Bättre lycka nästa gång', 5000);
     stopInteraction();
   }
 }
